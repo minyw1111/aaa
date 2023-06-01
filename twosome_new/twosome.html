@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Noto+Sans:wght@100;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/swiper.css" />
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script src="js/main.js"></script>
+  </head>
+  <body>
+    <header>
+        <div class="head">
+          <div class="logo">
+            <img src="images/logo_white.svg" alt="로고" />
+          </div>
+          <div class="menu">
+            <ul>
+              <li><a href="#">투썸플레이스 소개</a></li>
+              <li><a href="#">메뉴이야기</a></li>
+              <li><a href="#">브랜드 지원</a></li>
+              <li><a href="#">투썸플레이스 앱&멤버십</a></li>
+              <li><a href="#">가맹점 창업안내</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="sub">
+          <div class="submenu">
+            <ul>
+              <li>
+                <ul>
+                  <li><a href="#">투썸플레이스</a></li>
+                  <li><a href="#">커피이야기</a></li>
+                  <li><a href="#">디저트이야기</a></li>
+                  <li><a href="#">델리이야기</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">커피이야기</a></li>
+                  <li><a href="#">디저트이야기</a></li>
+                  <li><a href="#">델리이야기</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">어썸 페어링 플랜트</a></li>
+                  <li><a href="#">어썸 디저트 플랜트</a></li>
+                  <li><a href="#">델리이야기</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">투썸플레이스 앱 소개</a></li>
+                  <li><a href="#">투썸플레이스 멤버십</a></li>
+                  <li><a href="#">멤버십 소개</a></li>
+                  <li><a href="#">등급 및 혜택</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">가맹점 개설 안내</a></li>
+                  <li><a href="#">온라인 창업상담신청</a></li>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">가맹점 전용 금융상품</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+    <!-- Swiper -->
+    <div class="swiper-container" id="myswiper1">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <section>
+            
+          </section>
+        </div>
+        <div class="swiper-slide">
+            <div class="main-section-story">
+                <div class="tabs">
+                  <h1 class="main-title">MENUSTORY</h1>
+                  <ul class="tablist">
+                    <li class="is-active">
+                    <li>전문가의 섬세함으로 완성한 최상의 커피</li>
+                    <li>
+                      <strong><br />COFFEE STORY<br /></strong>
+                    </li>
+                    <li>
+                      <strong><br />DESSERT STORY<br /></strong>
+                    </li>
+                    <li>
+                      <strong><br />DELI STORY<br /></strong>
+                    </li>
+                    </li>
+                  </ul>
+                </div>
+                <div class="pro"><img src="images/lattee.png" alt="lattee" /></div>
+                <ul class="pro_small">
+                  <li><img src="images/longblack.png" alt="longblack" /></li>
+                  <li><img src="images/peach.png" alt="peach" /></li>
+                  <li><img src="images/lemontea.png" alt="lemontea" /></li>
+                </ul>
+              </section>
+        </div>
+        <div class="swiper-slide">
+            <section class="main-section-alist">
+                <div class="container">
+                  <h1 class="main_title">에이리스트</h1>
+                  <p class="main-desc">
+                    TWOSOME<br />
+                    IN YOUR MUG, A LIST
+                  </p>
+                  <p class="main-subtitle">언제 어디서나 여유롭게 즐기는 에이리스트</p>
+                  <p class="main-text">
+                    좋은 커피를 마셔야 비로소 하루가 시작되는 느낌이라면 하루에도 몇<br />
+                    번씩 그윽한 커피 향이 생각난다면 마음속 우선순위에 언제나 커피가<br />
+                    있는 당신이라면 잊지 말고 챙겨야 할 단 하나의 리스트, 투썸플레이스
+                    <br />에이리스트.
+                  </p>
+                </div>
+                </div>
+              </section>
+       
+        <div class="swiper-slide">
+          <img src="images/photo4.jpg" alt="photo4" />
+        </div>
+        <div class="swiper-slide">
+          <img src="images/photo4.jpg" alt="photo4" />
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <footer>페이지하단입니다.</footer>
+    <script src="js/swiper.js"></script>
+    <script>
+      let bullet = ["01", "02", "03", "04", "05"];
+      const container = document.querySelector("#myswiper1 ");
+      container.addEventListener("wheel", handleScroll);
+      function handleScroll(e) {
+        const isLastSlide = swiper1.isEnd;
+        if (isLastSlide) {
+          e.preventDefault(); // 스크롤 이벤트 무시
+          if (e.deltaY < 0) {
+            // 마우스 휠을 위로 굴린 경우
+            window.scrollTo(0, window.scrollY + e.deltaY);
+          } else {
+            // 마우스 휠을 아래로 굴린 경우
+            const scrollHeight = document.documentElement.scrollHeight;
+            const windowHeight = window.innerHeight;
+            const scrollTop = window.scrollY;
+            const bottom = scrollHeight - scrollTop - windowHeight;
+            if (bottom > 0) {
+              window.scrollTo(0, window.scrollY + e.deltaY); // 추가적인 스크롤 이벤트 처리
+            } else {
+              swiper1.slideNext(); // 다음 슬라이드로 이동
+            }
+          }
+        }
+      }
+      var swiper1 = new Swiper("#myswiper1", {
+        pagination: "#myswiper1 .swiper-pagination",
+        paginationClickable: true,
+        paginationBulletRender: function (index, className) {
+          return '<span class="' + className + '">' + bullet[index] + "</span>";
+        },
+        direction: "vertical",
+        slidesPerView: 1,
+        //spaceBetween: 30,
+        mousewheelControl: true,
+        //watchOverflow: true,
+        on: {
+          slideChange: function () {
+            const isLastSlide = this.isEnd;
+          },
+        },
+      });
+      var swiper2 = new Swiper("#myswiper2", {
+        slidesPerView: 3,
+        pagination: "#myswiper2 .swiper-pagination",
+        paginationClickable: true,
+        nextButton: ".swiper-button-next",
+        prevButton: ".swiper-button-prev",
+        spaceBetween: 30,
+      });
+    </script>
+  </body>
+</html>

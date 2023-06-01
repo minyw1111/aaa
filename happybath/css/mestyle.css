@@ -1,0 +1,383 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+body {
+  font-family: Arial, "맑은 고딕", sans-serif;
+}
+header {
+  background: #633d70;
+  padding-bottom: 100px;
+}
+.top {
+  width: 1000px;
+  margin: 0 auto;
+}
+.top nav {
+  display: flex;
+  justify-content: flex-end;
+}
+.top ul.top_menu {
+  width: 320px;
+  display: flex;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+  border-radius: 0 0 10px 10px;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+.top ul.top_menu li a::after {
+  content: "|";
+  padding: 0 10px;
+}
+.top ul.top_menu li:last-child a::after {
+  content: "";
+  padding: 0;
+}
+.top .logo {
+  display: flex;
+  width: 100%;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+}
+.top .menu .gnb {
+  height: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.top .menu .gnb li a {
+  color: #fff;
+}
+.visual {
+  position: relative;
+  top: -60px;
+  width: 1000px;
+  margin: 0 auto;
+}
+.con {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+}
+.con h3 {
+  text-align: center;
+  padding: 10px 0;
+}
+.con .left {
+  width: 48%;
+  float: left;
+  overflow: hidden;
+}
+ul.present {
+  overflow: hidden;
+}
+.con ul {
+  display: flex;
+}
+.con ul li {
+  position: relative;
+  /* float: left; */
+  width: 33.333%;
+  height: 306px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.first {
+  background: url(../images/img1.jpg);
+}
+.second {
+  background: url(../images/img2.jpg);
+}
+.third {
+  background: url(../images/img3.jpg);
+}
+.title {
+  text-align: center;
+  line-height: 306px;
+  color: #fff;
+  font-size: 20px;
+  text-shadow: 0 0 5px #000;
+}
+.box {
+  position: absolute;
+  width: 300px;
+  left: 0;
+  top: 0;
+  padding-top: 120px;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  opacity: 0;
+  text-shadow: 0 0 5px #000;
+}
+.con ul:hover .title {
+  display: none;
+}
+.con ul li:hover {
+  width: 60%;
+}
+.con ul:hover li:not(:hover) {
+  width: 20%;
+}
+.con ul li:hover .box {
+  opacity: 1;
+}
+.con .right {
+  float: right;
+}
+.beauty {
+  width: 500px;
+  height: 306px;
+  background: url(../images/woman.png);
+  background-position: center;
+  background-size: 100%;
+  transition: 0.5s;
+}
+.beauty:hover {
+  background-size: 120%;
+}
+.beauty .desc {
+  width: 100%;
+  padding-top: 120px;
+  padding-left: 20px;
+  font-size: 16px;
+  color: #000;
+}
+.beauty .desc a {
+  display: inline-block;
+  color: #000;
+  padding: 5px 20px;
+  border: 1px solid #000;
+  margin-top: 20px;
+  font-size: 14px;
+}
+.beauty .desc a:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+.con .left .box a {
+  display: inline-block;
+  color: #fff;
+  padding: 5px 20px;
+  border: 1px solid #fff;
+  margin-top: 20px;
+  font-size: 14px;
+}
+.con .left .box a:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+.product {
+  clear: both;
+  width: 1000px;
+  margin: 0 auto;
+}
+.product h3 {
+  text-align: center;
+  margin: 20px 0;
+}
+.product ul {
+  display: flex;
+  justify-content: space-between;
+}
+.product ul li {
+  position: relative;
+  cursor: pointer;
+}
+.product ul li::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: #633d70;
+  opacity: 0.8;
+  display: none;
+}
+/* .product ul li:first-child::after { 
+    display: none;
+    content: "로즈 에센스";
+    color: #fff;
+    text-align: center;
+    line-height: 400px;
+} */
+.product ul li:hover::after {
+  display: block;
+}
+.product .desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /*수직정렬*/
+  align-items: center; /*수평정렬*/
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.product .desc p {
+  text-align: center;
+}
+.product ul li:hover .desc {
+  opacity: 1;
+}
+.product .desc .more {
+  width: 50px;
+  border: 1px solid #fff;
+  background: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.product .desc .more:hover {
+  background: rgba(255, 255, 255, 0.8);
+  color: #633d70;
+}
+.board {
+  width: 1000px;
+  margin: 0 auto;
+}
+.review ul {
+  display: flex;
+  width: 450px;
+  height: 250px;
+  border: 1px solid #ddd;
+  justify-content: space-between;
+}
+.review ul li:last-child {
+  width: 60%;
+  background: #ddd;
+  padding: 20px 0 0 10px;
+}
+.review ul li:first-child {
+  text-align: center;
+}
+.review ul li img {
+  width: 100px;
+  margin-top: 25px;
+  margin-left: 35px;
+}
+.review ul li .more {
+  width: 50px;
+  border: 1px solid #fff;
+  text-align: center;
+  margin-top: 100px;
+  margin-left: 90px;
+  cursor: pointer;
+  color: #fff;
+  padding: 5px;
+}
+.board {
+  display: flex;
+  justify-content: space-between;
+}
+.board .review h3 {
+  text-align: center;
+  padding: 10px 0;
+}
+.event {
+  width: 450px;
+}
+.board .event h3 {
+  text-align: center;
+  padding: 10px 0;
+}
+.m {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.event .left {
+  display: flex;
+  width: 200px;
+  height: 140px;
+  background: #fff4c0;
+  justify-content: space-between;
+}
+.event .left li p {
+  padding: 5px;
+}
+.event .left li p:last-child {
+  white-space: nowrap;
+  padding-top: 10px;
+}
+.event .left li:first-child {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 10px 0;
+  padding-left: 5px;
+  font-size: 12px;
+}
+.event .right {
+  display: flex;
+  width: 200px;
+  height: 140px;
+  background: #febba0;
+}
+.event .right li p {
+  padding-top: 20px;
+  padding-left: 5px;
+  font-size: 12px;
+}
+.event .right li:first-child {
+  padding-left: 5px;
+}
+.event .right li img {
+  width: 70px;
+}
+footer {
+  background: #ddd;
+}
+.foot {
+  display: flex;
+  width: 1000px;
+  margin: 30px auto;
+}
+footer .left {
+  width: 70%;
+  margin-top: 10px;
+  line-height: 30px;
+}
+footer .left ul {
+  display: flex;
+}
+footer .left ul {
+  font-size: 14px;
+}
+footer .left p {
+  font-size: 12px;
+}
+footer .left ul li::after {
+  content: "|";
+  margin: 5px;
+}
+footer .left ul li:last-child::after {
+  content: "";
+}
+footer .right {
+  width: 30%;
+  margin-top: 10px;
+}
+footer .right ul {
+  display: flex;
+}
+footer .right ul li {
+  margin: 0 20px 50px;
+}
+footer .right ul li:last-child {
+  margin-right: 50px;
+}

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+
+    <!-- Demo styles -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #646464;
+        cursor: pointer;
+      }
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        width: 100%;
+        min-width: 1280px;
+        color: #222222;
+        font-family: "Noto Sans", "Malgun Gothic", dotum, gulim, verdana,
+          sans-serif, "akrobatB";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1;
+      }
+      nav #gnb.gnb-wrap {
+        width: 1295px;
+        height: 100px;
+      }
+      section {
+        height: 100px;
+        color: #fff;
+        background: #343436;
+      }
+      header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 100px;
+        z-index: 5;
+      }
+      header .head {
+        width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        height: 100%;
+        justify-content: space-between;
+        align-items: center;
+      }
+      header .head .menu {
+        display: flex;
+        flex-grow: 1;
+        margin-left: 50px;
+      }
+      header .head .menu ul {
+        display: flex;
+        height: 100%;
+        justify-content: space-between;
+        align-items: center;
+      }
+      header .head .menu ul a {
+        display: block;
+        width: 100%;
+        line-height: 100px;
+        font-family: "akrobatB";
+        text-align: center;
+        font-weight: 900;
+        padding: 35px 0px 35px 20px;
+      }
+      .submenu {
+        overflow: hidden;
+        display: none;
+      }
+      div.header-wrap {
+        width: 1345px;
+        height: 100px;
+        color: #222222;
+        background: #343436;
+      }
+      #wrap {
+        overflow: hidden;
+      }
+      #dHead {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        z-index: 1005;
+        box-sizing: border-box;
+        -webkit-transition: z-index 0s 0.4s ease;
+        transition: z-index 0s 0.4s ease;
+      }
+      .header-wrap {
+        position: relative;
+        width: 100%;
+        height: 100px;
+        background-color: rgba(52, 52, 54, 1);
+        box-sizing: border-box;
+      }
+      .header-wrap h1 > a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        font-size: 0;
+      }
+      .global {
+        display: flex;
+      }
+      .global-menu > li {
+        float: left;
+        padding: 35px 0 35px 20px;
+      }
+      .global-menu > li > a:last-child {
+        color: #ccc;
+        width: 86px;
+        line-height: 28px;
+        border: 1px solid #555;
+        background: #555;
+        opacity: 1;
+        text-align: center;
+      }
+      .global-menu ul li a {
+        font-size: 14px;
+      }
+      .global-menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        overflow: hidden;
+        z-index: 3;
+      }
+      .global-menu > li {
+        float: left;
+        padding: 35px 0 35px 20px;
+      }
+      .global-menu > li > a {
+        display: flex;
+        color: #999;
+        font-size: 13px;
+        line-height: 30px;
+        opacity: 1;
+      }
+      .global-menu > ul > li > a {
+        display: block;
+        color: #999;
+        font-size: 13px;
+        line-height: 30px;
+        opacity: 1;
+        float: right;
+      }
+      .global-menu > li:last-child > a {
+        color: #fff;
+        width: 86px;
+        line-height: 28px;
+        border: 1px solid #555;
+        background: #555;
+        opacity: 1;
+        text-align: center;
+      }
+      .gnb-wrap {
+        position: relative;
+        z-index: 1;
+      }
+      .gnb-wrap > ul > li {
+        position: relative;
+        float: left;
+        padding: 0 15px;
+      }
+      .gnb-wrap > ul > li > a {
+        display: block;
+        color: #fff;
+        font-family: "AkrobatB";
+        font-size: 19px;
+        font-weight: 500;
+        line-height: 100px;
+        letter-spacing: 2.28px;
+      }
+      .gnb-wrap .bar {
+        position: absolute;
+        bottom: 30px;
+        left: 0px;
+        display: block;
+        width: 0;
+        height: 3px;
+        margin-left: -8px;
+        background-color: #be161e;
+        opacity: 1;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="wrap">
+      <section>
+        <header id="dHead" class="hover">
+          <div class="head">
+            <h1>
+              <a><img src="images/logo_white_type_02.png" alt="logo" /></a>
+            </h1>
+            <div class="menu">
+              <nav id="gnb" class="gnb-wrap">
+                <ul>
+                  <li><a href="#">BRAND</a></li>
+                  <li><a href="#">MENU</a></li>
+                  <li><a href="#">MEMBERSHIP</a></li>
+                  <li><a href="#">BENEFIT</a></li>
+                  <li><a href="#">ACADEMY</a></li>
+                  <li><a href="#">STORE</a></li>
+                </ul>
+              </nav>
+              <ul class="global">
+                <li><a href="#">고객의소리</a></li>
+                <li><a href="#">채용</a></li>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="sub">
+            <div class="submenu">
+              <ul>
+                <li><a href="#">OUTBACK STORY</a></li>
+                <li><a href="#">BEEF STORY</a></li>
+                <li><a href="#">STEAK ACADEMY</a></li>
+                <li><a href="#">OUTBACK CSR</a></li>
+                <li><a href="#">PRESS CENTER</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">PERFECT BONE-IN STEAK EDITION</a></li>
+                <li><a href="#">TOMAHAWK STEAK</a></li>
+                <li><a href="#">PORTERHOUSE STEAK</a></li>
+                <li><a href="#">BLACK LABEL STEAKS</a></li>
+                <li><a href="#">STEAK & FAVORITES</a></li>
+                <li><a href="#">LUNCH SET</a></li>
+                <li><a href="#">PASTA & SALADS</a></li>
+                <li><a href="#">WINES</a></li>
+                <li><a href="#">DESSERTS & OTHERS</a></li>
+                <li><a href="#">DELIVERY</a></li>
+                <li><a href="#">LUNCH BOX</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">BOOMERANG MEMBERSHIP</a></li>
+                <li><a href="#">MEMBERSHIP BENEFIT</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">CREDIT CARDS</a></li>
+                <li><a href="#">SKT & KT</a></li>
+                <li><a href="#">POINT PAYMENT</a></li>
+                <li><a href="#">VOUCHER</a></li>
+                <li><a href="#">EVENT</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">Steak Cooking Class 1</a></li>
+                <li><a href="#">Steak Cooking Class 2</a></li>
+                <li><a href="#">CULINARY CLASS</a></li>
+                <li><a href="#">WINE CLASS</a></li>
+              </ul>
+            </div>
+          </div>
+        </header>
+      </section>
+    </div>
+
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/visual1.jpg" /></div>
+        <div class="swiper-slide"><img src="images/visual.jpg" /></div>
+        <div class="swiper-slide"><img src="images/visual2.jpg" /></div>
+        <div class="swiper-slide"><img src="images/visual3.jpg" /></div>
+        <div class="swiper-slide"><img src="images/visual4.jpg" /></div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        // autoplay: {
+        //   delay: 2500,
+        //   disableOnInteraction: false,
+        // },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>

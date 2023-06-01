@@ -1,0 +1,225 @@
+@charset "utf-8";
+@font-face {
+  font-family: notokr;
+  src: url(../webfonts/NotoSansKR-Regular.otf) format("opentype");
+}
+@font-face {
+  font-family: notokrB;
+  src: url(../webfonts/NotoSansKR-Bold.otf) format("opentype");
+}
+@font-face {
+  font-family: "Mark Pro";
+  src: url(../Twosome/webfonts/MarkPro.woff) format("woff");
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+body {
+  width: 100%;
+  min-width: 1280px;
+  color: #222222;
+  font-family: "Noto Sans", "Malgun Gothic", dotum, gulim, verdana, sans-serif,
+    "akrobatB";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+}
+nav #gnb.gnb-wrap {
+  width: 1920px;
+  height: 900px;
+}
+section {
+  height: 100px;
+  color: #fff;
+  background: #343436;
+}
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100px;
+  z-index: 5;
+}
+header .head {
+  width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+header .head .menu {
+  display: flex;
+  flex-grow: 1;
+  margin-left: 50px;
+}
+header .head .menu ul {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+header .head .menu ul a {
+  display: block;
+  width: 100%;
+  line-height: 100px;
+  font-family: "akrobatB";
+  text-align: center;
+  font-weight: 900;
+  padding: 35px 0px 35px 20px;
+}
+.submenu {
+  overflow: hidden;
+  display: none;
+}
+div.header-wrap {
+  width: 1345px;
+  height: 100px;
+  color: #222222;
+  background: #343436;
+}
+#wrap {
+  overflow: hidden;
+}
+#dHead {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 1005;
+  box-sizing: border-box;
+  -webkit-transition: z-index 0s 0.4s ease;
+  transition: z-index 0s 0.4s ease;
+}
+.header-wrap {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  background-color: rgba(52, 52, 54, 1);
+  box-sizing: border-box;
+}
+.header-wrap h1 > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+}
+.global {
+  display: flex;
+}
+.global-menu > li {
+  float: left;
+  padding: 35px 0 35px 20px;
+}
+.global-menu > li > a:last-child {
+  color: #ccc;
+  width: 86px;
+  line-height: 28px;
+  border: 1px solid #555;
+  background: #555;
+  opacity: 1;
+  text-align: center;
+}
+.global-menu ul li a {
+  font-size: 14px;
+}
+.global-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  overflow: hidden;
+  z-index: 3;
+}
+.global-menu > li {
+  float: left;
+  padding: 35px 0 35px 20px;
+}
+.global-menu > li > a {
+  display: flex;
+  color: #999;
+  font-size: 13px;
+  line-height: 30px;
+  opacity: 1;
+}
+.global-menu > ul > li > a {
+  display: block;
+  color: #999;
+  font-size: 13px;
+  line-height: 30px;
+  opacity: 1;
+  float: right;
+}
+.global-menu > li:last-child > a {
+  color: #fff;
+  width: 86px;
+  line-height: 28px;
+  border: 1px solid #555;
+  background: #555;
+  opacity: 1;
+  text-align: center;
+}
+.gnb-wrap {
+  position: relative;
+  z-index: 1;
+}
+.gnb-wrap > ul > li {
+  position: relative;
+  float: left;
+  padding: 0 15px;
+}
+.gnb-wrap > ul > li > a {
+  display: block;
+  color: #fff;
+  font-family: "AkrobatB";
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 100px;
+  letter-spacing: 2.28px;
+}
+.gnb-wrap .bar {
+  position: absolute;
+  bottom: 30px;
+  left: 0px;
+  display: block;
+  width: 0;
+  height: 3px;
+  margin-left: -8px;
+  background-color: #be161e;
+  opacity: 1;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
